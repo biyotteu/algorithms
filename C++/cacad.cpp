@@ -1,0 +1,2 @@
+#include <bits/stdc++.h>
+std::map<long long int,long long int> dp;long long int n,p,q;long long int f(long long int v){if(!v)return 1;if(dp[v])return dp[v];return dp[v]=f(v/p)+f(v/q);}int main(){std::cin >> n >> p >> q;std::cout << f(n);}
